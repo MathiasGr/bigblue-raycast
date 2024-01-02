@@ -1,0 +1,61 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "bigblue",
+  "title": "Bigblue",
+  "description": "Browse Bigblue orders in seconds",
+  "icon": "command-icon.png",
+  "author": "leo_ternoir",
+  "owner": "bigblue",
+  "categories": [
+    "Applications"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "go-to-order",
+      "title": "Go to order",
+      "description": "Access orders in the Bigblue app",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "order",
+          "placeholder": "Order ID",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "impersonate",
+      "title": "Impersonate merchant",
+      "description": "Access a merchant's Bigblue account",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "quadri",
+          "placeholder": "Quadri",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.4"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
