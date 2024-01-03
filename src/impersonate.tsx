@@ -1,7 +1,7 @@
 import { LaunchProps, Toast, closeMainWindow, open, showToast } from "@raycast/api";
 
 function getQuadri(str: string) {
-  const match = str.match(/[A-Z0-9]{4}/);
+  const match = str.match(/[a-zA-Z0-9]{4}/);
   if (!match) throw new Error("Missing quadri");
   return match.join();
 }

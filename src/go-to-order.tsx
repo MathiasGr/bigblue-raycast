@@ -1,7 +1,7 @@
 import { LaunchProps, Toast, closeMainWindow, open, showToast } from "@raycast/api";
 
 function getOrderID(str: string) {
-  const match = str.match(/[A-Z0-9]{4}[A-Z0-9]{8}/);
+  const match = str.match(/[a-zA-Z0-9]{4}[a-zA-Z0-9]{8}/);
   if (!match) throw new Error("Missing order ID");
   return match.join();
 }
